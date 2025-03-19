@@ -1,0 +1,1034 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+	<head>
+<base href="https://dhsproductionsouam.ludus.com/"/>
+
+        		<title>Ludus - DHS Productions</title>
+                <meta property="og:title" content="DHS Productions" />
+        <meta property="og:site_name" content="Ludus"/>
+        <meta property="og:image" content="https://ludus.com/images/social_share_graphic.png?refresh=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon" href="https://ludus.com/apple-touch-icon.png?refresh=2">
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+		
+		<link href="https://ludus.com/css/style.css?refresh=128" type="text/css" rel="stylesheet">
+        <link href="https://ludus.com/css/ludus-design.css?refresh=2" type="text/css" rel="stylesheet">
+        		<link rel="stylesheet" href="https://ludus.com/css/animate.css?refresh=1" type="text/css">
+		<link rel="stylesheet" href="https://ludus.com/css/jquery.reject.css?refresh=1" type="text/css">
+		<link rel="stylesheet" href="https://ludus.com/css/jquery-ui.css?refresh=1" />
+        <link href="https://ludus.com/js/fullcalendar/core/main.css?refresh=1" rel='stylesheet' />
+        <link href="https://ludus.com/js/fullcalendar/daygrid/main.css?refresh=1" rel='stylesheet' />
+        
+        <link rel="stylesheet" href="https://ludus.com/fontawesome/css/all.min.css?refresh=1" />
+        <link href="https://ludus.com/fontawesome/css/v4-shims.min.css?refresh=1" rel="stylesheet" />
+
+		<script type="text/javascript" src="https://ludus.com/js/jquery.min.js?refresh=1"></script>
+		<script src="https://ludus.com/js/jquery-ui.js?refresh=3"></script>
+		
+		<script type="text/javascript" src="https://ludus.com/js/jquery.validate.min.js?refresh=1"></script>
+		
+		<script src="https://ludus.com/placeholder/jquery.placeholder.min.js?refresh=1"></script>
+        
+        <script src="https://ludus.com/jquery-mask/src/jquery.mask.js?refresh=1"></script>
+        
+        <link rel="stylesheet" href="https://ludus.com/css/tipso.css?refresh=1">
+
+        <script src="https://ludus.com/js/tipso.js?refresh=1"></script>
+        
+        <script>
+            function iframeResize() {
+                                    var height = $('body').outerHeight(); // IMPORTANT: If body's height is set to 100% with CSS this will not work.
+                    parent.postMessage("resize::"+height,"*");
+                
+                if (/Mobi/.test(navigator.userAgent)) {
+                    var windowHeight = screen.height;
+                    $('.jc-chart-container-all').attr('style', 'height: '+windowHeight+'px !important');
+                }
+
+                console.log(height);
+            }
+
+            function scrollToWidget() {
+                var scroll = '1';
+                parent.postMessage("scroll::"+scroll,"*");
+
+                console.log('scroll');
+            }
+
+                            if(top!=self){
+                    top.location.replace(document.location);
+                }
+                        
+            $(function(){
+                $('.side_pane_link').click(function(){
+                    var pane_id = $(this).attr('data-id');
+                    $('.side_pane[id="'+pane_id+'"]').show('slide', { direction: 'left' });
+                });
+
+                $('.side_pane_header_exit').click(function(){
+                    $('.side_pane').hide('slide', { direction: 'left' });
+                });
+                
+                $('.popup_module_exit').click(function(){
+                    $('.popup_module').fadeOut(500);
+                    $('.popup_module_overlay').fadeOut(500);
+                });
+
+                $('.popup_button').click(function(){
+                    var popup = $(this).attr('data-popup');
+                    var popup_no_scroll = $(this).attr('data-popup-no-scroll');
+
+                    $('.popup_module[data-popup="'+popup+'"]').fadeIn(500);
+                    $('.popup_module_overlay[data-popup="'+popup+'"]').fadeIn(500);
+
+                    if(popup_no_scroll != 'true'){
+                        $('html, body').animate({ scrollTop: $('body').offset().top }, 'slow');
+                    }
+                });
+                
+                $('.label_item input[type="radio"]').on('change',function(){
+                    var group_id = $(this).attr('data-group-id');
+                    var item_id = $(this).attr('data-item-id');
+
+                    $('.label_item_group[data-group-id="'+group_id+'"] .label_item').removeClass('label_item_active');
+
+                    $(this).closest('.label_item').addClass('label_item_active');
+                });
+            });
+        </script>
+		
+		<style type="text/css">
+		#design_tool_canvas {
+			background-color:#ead9f2 !important;
+		}
+		
+                    a:link, a:visited, .span_link, .green_text {
+                color:#41bcc7 !important;
+                text-decoration:none;
+            }
+            
+            a:hover, .span_link:hover {
+                color:#00717c !important;
+                text-decoration:underline;
+            }
+
+            body {
+                            background-color:#ead9f2 !important;
+                        }
+        
+        .header {
+            height:50px;
+        }
+
+        .header_logo img {
+            height:20px;
+            margin-top:14px;
+        }
+            
+        .header_logo a {
+            color:#ffffff !important;
+        }
+		
+        .header, .checkout_timeline_item_active, .nav_mobile_panel {
+            background-color:#d86bd3 !important;
+        }
+
+        .header_shopping_tab, .header_shopping_tab_current {
+            line-height:50px;
+            height:50px;
+        }
+
+		.header_shopping_tab, .header_shopping_tab_current, .nav_mobile_item, .header_link {
+			color:#ffffff !important;
+		}
+            
+        .header_shopping_tab:hover {
+            background-color:#e275dd !important;
+            color:#ffffff;
+        }
+            
+        .header_shopping_tab_current {
+            background-color:#e275dd !important;
+        }
+
+        .widget_header_nav_item:hover {
+            background-color:#fc63ac !important;
+            color:#ffffff;
+        }
+
+        .widget_header_nav_item_current {
+            background-color:#fc63ac !important;
+            color:#ffffff;
+        }
+
+        #nav_mobile_icon {
+            padding:0px 15px 0px 15px;
+            box-sizing:border-box;
+        }
+		
+		.splash_buy_button, .next_button, .showtimes_item_get_tickets_button, .signup_login_button, .form_button {
+			background-color:#fc63ac;
+			border:1px #fc63ac solid;
+			color:#ffffff;
+		}
+
+        .splash_buy_button:hover, .next_button:hover, .showtimes_item_get_tickets_button:hover, .signup_login_button:hover, .form_button:hover{
+            background-color:#b11861;
+            border:1px #b11861 solid;
+        }
+            
+                    .green_button, .showtimes_item_get_tickets_button {
+                background-color:#fc63ac;
+                border:1px #fc63ac solid;
+                color:#ffffff;
+            }
+
+            .green_button:hover, .showtimes_item_get_tickets_button:hover {
+                background-color:#b11861;
+                border:1px #b11861 solid;
+                color:#ffffff;
+            }
+        		
+		.splash_other_button, .keepshopping_button  {
+			background-color:#e5e5e5;
+			border:1px #e5e5e5 solid;
+			color:#333333;
+		}
+        .splash_other_button:hover, .keepshopping_button:hover {
+            background-color: #000000;
+            border:1px #9a9a9a solid;
+        }
+
+        .page_left_title, .checkout_title_right, .checkout_subtitle_right, .bo_show_name, .bo_showtime_name, .login_box_header {
+            color:#333333 !important;
+        }
+            
+        .cart_line_divide {
+            border-bottom:1px #d1c0d9 solid !important;
+        }
+            
+        .cart_line_title {
+            color:#333333 !important;
+            background-color:#ead9f2 !important;
+        }
+            
+        .cart_line_description {
+            color:#333333 !important;
+        }
+            
+        .page_switcher_button_active {
+            background-color:#fc63ac !important;
+        }
+            
+        .login_box_content {
+            border-top: 5px #d86bd3 solid !important;
+        }
+
+
+        .announcement {
+            background-color: #fff0b6 !important;
+            border-color: #fff0b6 !important;
+            color: #333333 !important;
+        }
+        .announcement_content {
+            background-color: #fff0b6 !important;
+            border-color: #fff0b6 !important;
+            color: #333333 !important;
+        }
+
+        .announcement_content a {
+            color: #333333 !important;
+        }
+
+        .chart_message {
+            background-color: #fff0b6 !important;
+            border-color: #fff0b6 !important;
+            color: #333333 !important;
+        }
+
+        .chart_message a {
+            color: #333333 !important;
+        }
+            
+        .jc-seat-enabled {
+            background-color:#9CCB53 !important;
+			border-color:#70B703 !important;
+        }
+            
+        .jc-seat-disabled {
+            cursor:not-allowed;
+        }
+            
+        .jc-seat-selected {
+            background-image: url('./images/icons/checkbox_checked_transparent.png') !important;
+        }
+            
+        .jc-seatNormal.jc-seat-selected {
+            border:0px !important;
+        }
+            
+        .jc-seatRed {
+            background-color:#C00000 !important;
+            border:1px #C00000 solid !important;
+        }
+            
+        .jc-seatBlue {
+            background-color:#0091C7 !important;
+            border:1px #0091C7 solid !important;
+        }
+            
+        .jc-seatPink {
+            background-color:#FF1BF5 !important;
+            border:1px #FF1BF5 solid !important;
+        }
+            
+        .jc-seatOrange {
+            background-color:#ff9933 !important;
+            border:1px #ff9933 solid !important;
+        }
+            
+        .jc-seatBlack {
+            background-color:#333333 !important;
+            border:1px #333333 solid !important;
+        }
+            
+        .jc-seatGold {
+            background-color:#ccb61c !important;
+            border:1px #ccb61c solid !important;
+        }
+            
+        .jc-seat:not(.jc-seat-enabled):not(.jc-seat-disabled) {
+            opacity:0;
+        }
+            
+        .jc-warning {
+            display:none !important;
+        }
+
+        #multi-wdgtz-container {
+            border-radius:5px;
+        }
+            
+        #wdgt-z-htl-header {
+            background-color:#d86bd3 !important;
+            color:#ffffff !important;
+        }
+            
+        #wdgt-z-htl-submit-button {
+            background-color:#93C741 !important;
+        }
+            
+        #wdgt-z-htl-more-option-button a {
+            color:#41bcc7 !important;
+            text-decoration:none;
+        }
+            
+        #wdgt-z-htl-more-option-button a:active {
+            text-decoration:underline;
+        }
+            
+        #wdgt-z-htl-ineed-select, #wdgt-z-htl-for-select-person {
+            color:#333333 !important;
+        }
+
+        .event-category-pill:first-child.active, .event-category-pill.active {
+            background-color:#fc63ac;
+            color:#ffffff;
+        }
+
+        .fc-content {
+            color: #ffffff !important;
+        }
+
+        .fc-button-primary {
+            background-color: #fc63ac !important;
+            color: #ffffff        }
+
+		</style>
+                
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        </script>
+                
+        
+                
+            <link rel="stylesheet" href="https://ludus.com/js/fancybox/fancybox.min.css?refresh=1"/>
+    <link rel="stylesheet" href="https://ludus.com/js/fancybox/panzoom.min.css?refresh=1"/>
+    <script src="https://ludus.com/js/ludus_toast.js?refresh=1"></script>
+
+	</head>
+
+<style>
+@media only screen and (max-width: 600px) {
+            .collapse-showtimes-btn {
+                line-height: 20px !important;
+                font-size: 9pt;
+            }
+}
+</style>
+	
+<body class="section-events" >
+	
+    
+<script>
+    $(function(){
+        $('#nav_mobile_icon').click(function(){
+            if($('.nav_mobile_panel').is(':visible')){
+                $('.nav_mobile_panel').hide();
+                $('.nav_mobile_list').hide();
+                
+                $('.nav_mobile_icon_left').html('<i class="fa fa-bars" aria-hidden="true"></i>');
+            }else{
+                $('.nav_mobile_panel').show();
+                $('.nav_mobile_list').show();
+                
+                $('.nav_mobile_icon_left').html('<i class="fa fa-times" aria-hidden="true"></i>');
+            }
+        });
+        
+        $('.nav_item').hover(function(){
+            if($(this).find('span').attr('data-current') != '1'){
+                $(this).find('span').addClass('green_underline_nav');
+            }
+        }, function(){
+            if($(this).find('span').attr('data-current') != '1'){
+                $(this).find('span').removeClass('green_underline_nav');
+            }
+        });
+    });
+</script>
+
+<div class="header">
+    <div class="header_content">
+        
+        <div class="desktop_copy">
+                            
+                <div class="header_nav_right">
+                                            <a href="cart.php" class="header_link tab_cart">
+                            <div class="header_shopping_tab header_shopping_tab_right">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
+                                0                                <div class="clear"></div>
+                            </div>
+                        </a>
+                                        <a href="patron_login.php" class="header_link tab_my_orders">
+                        <div class="header_shopping_tab header_shopping_tab_right">
+                            My Account
+                            <div class="clear"></div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="header_nav_center">
+                        <a href="index.php?sections=events" class="header_link tab_buy_tickets">
+                            <div class="header_shopping_tab_current">
+                                Buy Tickets                                <div class="clear"></div>
+                            </div>
+                        </a>
+
+                        
+                        
+                        
+                        
+                                                
+                                            </div>
+                </div>
+
+                <div class="mobile_copy" style="display:none;">
+                    <div class="header_shopping_tab header_shopping_tab_right" id="nav_mobile_icon">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+
+                                    <div class="header_logo">
+                        <a href="index.php" style="font-weight:bold;margin-right:10px;">
+                            <img src="https://ludus.com/images/LUDUS.logo.white.png" alt="Ludus">
+                        </a>
+                                                    <a href="splash.php" class="header_link tab_site_name">
+                                <div class="header_shopping_tab" style="max-width:300px;text-overflow: ellipsis;overflow-y: hidden;white-space: nowrap;font-weight:bold;">
+                                    <span>DHS Productions</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </a>
+                                            </div>
+                
+                    
+            <div class="header_logo_custom" style="display:none;">
+                <a href="index.php">
+                    <img src="" alt="Ludus">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="nav_mobile_panel"></div>
+
+<div class="nav_mobile_list">
+    <div class="nav_mobile_items">
+        <a href="splash.php">
+            <div class="nav_mobile_item" style="max-width:90%;height:auto;line-height:24px;text-overflow: ellipsis;font-weight:bold;padding-top:0px;box-sizing:border-box;margin-bottom:10px;margin-top:20px;">
+                    DHS Productions            </div>
+        </a>
+        <a href="index.php">
+            <div class="nav_mobile_item tab_buy_tickets" style="padding-top:0px;">
+                    Buy Tickets            </div>
+        </a>
+        
+                                                 <a href="patron_login.php">
+            <div class="nav_mobile_item">
+                My Account
+            </div>
+        </a>
+                    <a href="cart.php">
+                <div class="nav_mobile_item">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
+                    Cart (0)
+                </div>
+            </a>
+            </div>
+</div>
+
+
+	
+    <div class="popup_module_overlay" data-popup="sign_in"></div>
+    <div class="popup_module" data-popup="sign_in">
+
+        <div class="popup_module_header">
+            <div class="popup_module_exit"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+            <div class="popup_module_header_title"><i class="fa-regular fa-user-lock"></i> Sign In</div>
+            <div class="popup_module_header_subtitle" id="showtimes_add_name">Enter your code below to sign in</div>
+        </div>
+
+        <div class="popup_module_content" data-content="sign_in" style="padding:20px;">
+
+            <form action="pass_login_submit.php" method="post">
+
+                <div class="popup_module_input_holder" style="margin-bottom:0px;">
+                    <div class="popup_module_input_label">Member or Pass Holder Code</div>
+
+                    <input type="text" name="code" class="admin_login_input" placeholder="Code" required>
+                </div>
+
+                <input type="hidden" name="referrer" value="" id="sign_in_referrer">
+                <button type="submit" class="generic_button green_button" style="width:100%;height:40px;">Sign In</button>
+            </form>
+            <div style="padding-top: 10px;display:flex;justify-content:center;">
+                    <span class="span_link" style="font-size:10pt;color:#000 !important;" onclick='window.location.href="forgot_passcode.php";'>Forgot Code?</span>
+            </div>
+        </div>
+    </div>
+    <div class="patron-calendar" id='calendar'><div class="patron-calendar" id="close"><i class="fa-solid fa-xmark"></i></div></div>
+
+	<div class="page">
+				
+        
+    <script>
+        $(function(){
+            $('.show_pass_button').click(function(){
+                var show_id = parseInt($(this).attr('data-show-id'));
+                var bpo = $(this).attr('data-bpo');
+                
+                var pass = $('input[data-show-id="'+show_id+'"]').val();
+                
+                if(bpo != ''){
+                    window.location = 'index.php?pass='+pass+'&show_id='+show_id+'&bpo='+bpo;
+                }else{
+                    window.location = 'index.php?pass='+pass+'&show_id='+show_id;
+                }
+            });
+            
+            $('#showtime_form').on('touchstart click', function(e) {
+              var keyCode = e.keyCode || e.which;
+              if (keyCode === 13) { 
+                e.preventDefault();
+                return false;
+              }
+            });
+        });
+    </script>
+        
+    <span id="mainpage"></span>
+	
+	<form action="select.php" method="post" id="showtime_form" onkeypress="return event.keyCode != 13;">
+		
+	    <div class="content" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                        
+                        
+            <div class="page_left">
+            
+            
+            
+            
+            
+            
+            
+                
+                
+                                
+                                
+                
+                                                <div class="patron-event-list-header" style="margin-bottom: 15px;">
+                        <h1 class="page_left_title" id="upcoming_shows_title" style="font-size:22px;font-weight:bold;color:#333333;">
+                                                            <span class="desktop_copy"><i class="far fa-calendar-alt" style="padding-right:5px;"></i> Upcoming Events</span><span class="mobile_copy inline_mobile" style="display:none;"><i class="far fa-calendar-alt" style="padding-right:5px;"></i> Events</span>
+                                                                                    </h1>
+                                            </div>
+                                                    
+                
+                                    <div class="show_item"  data-event-categories=""  data-cy="reserved_event">
+                                                    <div class="show_item_category_pills" style="display:none;">
+                                                            </div>
+                                                                                                    <div class="show_item_cover_photo" style="background-image:url('https://ludus.nyc3.digitaloceanspaces.com/1735829827.png');"></div>
+                                                <h2 class="show_item_title" style="">
+                            DHS Hairspray                                                    </h2>
+                        
+                        <div class="clear"></div>
+                        
+
+                       
+                        <div class="show_about_buttons">
+                                                            <a href="show_location.php?show_id=200472393">
+                                    <div class="show_about_button directions_button" style="width:100%;">
+                                        <i class="fa fa-map-marker"></i> Get Directions                                    </div>
+                                </a>
+                                                                                        
+                        </div>
+                        
+                        
+                        <div class="clear"></div>
+
+                
+
+                                                                            
+                                            <script>
+                            $(function(){
+                                $('#showtimes_item152608').click(function(){
+                                    $('#showtime_radio152608').attr('checked',true);
+                                    $('#showtime_form').submit();
+                                });
+                            });
+                        </script>
+                        
+                        <div class="showtimes_item " id="showtimes_item152608" style="">
+                                                        <div class="admin_showtimes_item_title" style="line-height:30px;">
+                                
+                                <div class="desktop_copy">
+                                                                                                                            <span class="span_link" >
+                                                                                                            Thursday, April 3, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                <div class="mobile_copy" style="display:none;">
+                                                                                                                        <span class="span_link" >
+                                                                                                            Thursday, April 3, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                                            </div>
+                            <div class="admin_showtimes_item_actions" style="border:0px;background-color:transparent;box-shadow:none;padding-right:0px;padding-left:0px;">
+                                <label for="showtime_radio152608" style="position:absolute;opacity:0;width:10px;height:10px;">Thursday, April 3, 2025 7:00 PM</label>
+                                <input type="radio" name="time_id" value="152608" id="showtime_radio152608" class="time_radio_button"  style="display:none;">
+                                                                        <div class="showtimes_item_get_tickets_button" style="">
+                                                                                            Get Tickets                                                                                    </div>
+                                        
+                                                                
+                            </div>
+
+                            <div class="red_span sold_out_span" >
+                                <i class='fa-solid fa-triangle-exclamation'></i> Sold Out                            </div>
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                                            
+                                            <script>
+                            $(function(){
+                                $('#showtimes_item152609').click(function(){
+                                    $('#showtime_radio152609').attr('checked',true);
+                                    $('#showtime_form').submit();
+                                });
+                            });
+                        </script>
+                        
+                        <div class="showtimes_item " id="showtimes_item152609" style="">
+                                                        <div class="admin_showtimes_item_title" style="line-height:30px;">
+                                
+                                <div class="desktop_copy">
+                                                                                                                            <span class="span_link" >
+                                                                                                            Friday, April 4, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                <div class="mobile_copy" style="display:none;">
+                                                                                                                        <span class="span_link" >
+                                                                                                            Friday, April 4, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                                            </div>
+                            <div class="admin_showtimes_item_actions" style="border:0px;background-color:transparent;box-shadow:none;padding-right:0px;padding-left:0px;">
+                                <label for="showtime_radio152609" style="position:absolute;opacity:0;width:10px;height:10px;">Friday, April 4, 2025 7:00 PM</label>
+                                <input type="radio" name="time_id" value="152609" id="showtime_radio152609" class="time_radio_button"  style="display:none;">
+                                                                        <div class="showtimes_item_get_tickets_button" style="">
+                                                                                            Get Tickets                                                                                    </div>
+                                        
+                                                                
+                            </div>
+
+                            <div class="red_span sold_out_span" >
+                                <i class='fa-solid fa-triangle-exclamation'></i> Sold Out                            </div>
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                                            
+                                            <script>
+                            $(function(){
+                                $('#showtimes_item152611').click(function(){
+                                    $('#showtime_radio152611').attr('checked',true);
+                                    $('#showtime_form').submit();
+                                });
+                            });
+                        </script>
+                        
+                        <div class="showtimes_item " id="showtimes_item152611" style="">
+                                                        <div class="admin_showtimes_item_title" style="line-height:30px;">
+                                
+                                <div class="desktop_copy">
+                                                                                                                            <span class="span_link" >
+                                                                                                            Saturday, April 5, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 1:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                <div class="mobile_copy" style="display:none;">
+                                                                                                                        <span class="span_link" >
+                                                                                                            Saturday, April 5, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 1:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                                            </div>
+                            <div class="admin_showtimes_item_actions" style="border:0px;background-color:transparent;box-shadow:none;padding-right:0px;padding-left:0px;">
+                                <label for="showtime_radio152611" style="position:absolute;opacity:0;width:10px;height:10px;">Saturday, April 5, 2025 1:00 PM</label>
+                                <input type="radio" name="time_id" value="152611" id="showtime_radio152611" class="time_radio_button"  style="display:none;">
+                                                                        <div class="showtimes_item_get_tickets_button" style="">
+                                                                                            Get Tickets                                                                                    </div>
+                                        
+                                                                
+                            </div>
+
+                            <div class="red_span sold_out_span" >
+                                <i class='fa-solid fa-triangle-exclamation'></i> Sold Out                            </div>
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                                            
+                                            <script>
+                            $(function(){
+                                $('#showtimes_item152610').click(function(){
+                                    $('#showtime_radio152610').attr('checked',true);
+                                    $('#showtime_form').submit();
+                                });
+                            });
+                        </script>
+                        
+                        <div class="showtimes_item " id="showtimes_item152610" style="">
+                                                        <div class="admin_showtimes_item_title" style="line-height:30px;">
+                                
+                                <div class="desktop_copy">
+                                                                                                                            <span class="span_link" >
+                                                                                                            Saturday, April 5, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                <div class="mobile_copy" style="display:none;">
+                                                                                                                        <span class="span_link" >
+                                                                                                            Saturday, April 5, 2025                                                        <span style="color:#777777;">
+                                                            &nbsp; 7:00 PM                                                        </span>
+                                                                                                    </span> 
+                                                                                                                                                                                    </div>
+                                                            </div>
+                            <div class="admin_showtimes_item_actions" style="border:0px;background-color:transparent;box-shadow:none;padding-right:0px;padding-left:0px;">
+                                <label for="showtime_radio152610" style="position:absolute;opacity:0;width:10px;height:10px;">Saturday, April 5, 2025 7:00 PM</label>
+                                <input type="radio" name="time_id" value="152610" id="showtime_radio152610" class="time_radio_button"  style="display:none;">
+                                                                        <div class="showtimes_item_get_tickets_button" style="">
+                                                                                            Get Tickets                                                                                    </div>
+                                        
+                                                                
+                            </div>
+
+                            <div class="red_span sold_out_span" >
+                                <i class='fa-solid fa-triangle-exclamation'></i> Sold Out                            </div>
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                                                                                                                    
+                                
+                        <div class="clear"></div>
+                    </div>
+
+                                
+                    
+                    
+                                    
+            </div>
+            
+            <div class="page_right" style="float: unset; position: sticky !important; top: 80px !important; height: 100%;">
+                                
+                                            
+                            
+                            
+            </div>
+            
+            <div class="clear"></div>
+			
+		</div>
+        
+        <input type="hidden" name="widget" value="">
+		
+	</form>
+		
+ 
+		
+	</div>
+	<script src="https://ludus.com/js/fancybox/fancybox.umd.js?refresh=1"></script>
+    <script src="https://ludus.com/js/fullcalendar/core/main.js?refresh=1"></script>
+    <script src="https://ludus.com/js/fullcalendar/daygrid/main.js?refresh=1"></script>
+    <script>
+        $(function () {
+            Fancybox.bind("[data-fancybox]", {
+                maxWidth: 800,
+            });
+        });
+    </script>
+	
+<div class="footer">
+    <div class="footer_content">
+        Powered by <a href="https://ludus.com" target="_blank"><img src='https://ludus.com/images/LUDUS.logo.black.png' height='20px' style='display:inline-block;vertical-align:middle;margin-left:5px;padding-bottom:5px;'></a> &nbsp; | &nbsp; &copy; 2025 All Rights Reserved
+        <div class="footer_right">
+            <a href="index.php">
+                Get Tickets            </a>
+            &nbsp; &nbsp;
+            <a href="https://ludus.com/product_privacy.php" target="_blank">
+                Privacy
+            </a>
+                                                    &nbsp; &nbsp;
+            <a href="https://instagram.com/dhs._productions" target="_blank">
+                Instagram
+            </a>
+                    &nbsp; &nbsp;
+            <a href="logout.php">
+                Forget Me
+            </a>
+        </div>
+    </div>
+
+    
+    </div>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  (function() {
+    var u="//common.ludusapps.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+        _paq.push(['setCookieDomain', '*.ludus.com']);
+        _paq.push(['setDomains', '*.ludus.com']);
+        _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->        <script>
+            function decodeEntities(encodedString) {
+                var textArea = document.createElement('textarea');
+                textArea.innerHTML = encodedString;
+                return textArea.value;
+            }
+            $(function () {
+                $('.tipso_hover').tipso({
+                    background: '#000',
+                })
+
+
+                $('.show_listing_notice > p').find('a').attr('target', '_blank');
+                
+                // Event Category Pills
+                $('.event-category-pill').not('.show_item_category_pill').on('click', function() {
+                    // Remove category_id query param from current URL
+
+                    $(this).siblings('.active').removeClass('active');
+                    $(this).addClass('active');
+                    const is_class_category = $(this).data('class');
+                    console.log(is_class_category);
+                    const category_id = $(this).data('value');
+
+                    
+
+                    const show_items = $('div.show_item');
+                    show_items.hide();
+                    if (category_id != '0') {
+                        if (is_class_category == true) {
+                            setCookie('class_category',category_id,1);
+                        } else {
+                            setCookie('event_category',category_id,1);
+                        }
+                        show_items.filter('[data-event-categories]').each(function() {
+                            const categories = $(this).data('event-categories').split(';').slice(0, -1);;
+                            if(categories.includes(category_id.toString())){
+                                $(this).fadeIn();
+                            }
+                        });
+                    } else {
+
+                        if (is_class_category == true) {
+                            eraseCookie('class_category');
+                        } else {
+                            eraseCookie('event_category');
+                        }
+
+                        show_items.fadeIn();
+                    }
+                });
+                
+                // Set filter to last chosen filter or default to All Events pill
+                                    $('.event-category-pill[data-value=0]').trigger('click');
+                
+
+                // Search button
+                $('.patron-search-button').on('click', function() {
+                        $('.patron-search-bar').animate({width:'toggle'},300, function() {
+                            if ($(this).is(':visible')) {
+                                $(this).focus();
+                            }
+                        });
+                });
+
+                // Search functionality
+                $('.patron-search-bar').on('keyup', function() {
+                          // Retrieve the input field text and reset the count to zero
+                    var filter = $(this).val(),
+                    count = 0;
+
+                    // Loop through the comment list
+                    $('div.show_item').each(function() {
+                            // If the event item does not contain the text phrase fade it out
+                            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                                $(this).fadeOut();
+                            } else {
+                                $(this).fadeIn(); 
+                                count++;
+                            }
+                    });
+                });
+                                const calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                 plugins: [ 'dayGrid' ],
+                events: [                            {
+                                title: decodeEntities('DHS Hairspray'),
+                                start: '2025-04-03 19:00',
+                                                                    url: 'https://dhsproductionsouam.ludus.com/index.php?time_id=152608',
+                                                                                                                            },
+                                                    {
+                                title: decodeEntities('DHS Hairspray'),
+                                start: '2025-04-04 19:00',
+                                                                    url: 'https://dhsproductionsouam.ludus.com/index.php?time_id=152609',
+                                                                                                                            },
+                                                    {
+                                title: decodeEntities('DHS Hairspray'),
+                                start: '2025-04-05 13:00',
+                                                                    url: 'https://dhsproductionsouam.ludus.com/index.php?time_id=152611',
+                                                                                                                            },
+                                                    {
+                                title: decodeEntities('DHS Hairspray'),
+                                start: '2025-04-05 19:00',
+                                                                    url: 'https://dhsproductionsouam.ludus.com/index.php?time_id=152610',
+                                                                                                                            },
+                        ],
+                eventRender: function (info) {
+                            if ($(info.el).attr('href').split('time_id=').pop() == 'coming_soon' || $(info.el).attr('href').split('time_id=').pop() == 'past_date' || $(info.el).attr('href').split('time_id=').pop() == 'sold_out') {
+                                $(info.el).css('cursor', 'not-allowed');
+                            }
+
+                            $(info.el).on('click', function(e) {
+                                    e.preventDefault();
+                                    let selected_showtime = $(this).attr('href').split('time_id=').pop();
+                                    if (selected_showtime == 'coming_soon' || selected_showtime == 'past_date' || selected_showtime == 'sold_out') {
+                                        return;
+                                    }
+                                    $('#showtime_radio' + selected_showtime).attr('checked',true);
+                                    $('form#showtime_form').submit();
+                            });
+                        },
+                height: 'auto',
+                width: 'auto',
+                expandRows: true,
+                aspectRatio: 3,
+                backgroundColor: '#ffffff',
+                eventBackgroundColor: '#fc63ac',
+                eventBorderColor: '#fc63ac',
+                handleWindowResize: true,
+                buttonText: {
+                    today: 'Today'
+                }
+                 });
+                 // Calendar View
+                 $('.patron-calendar-view-button').on('click', function() {
+                     $('.patron-calendar').slideDown(function() {
+                        calendar.render();
+                        $('.patron-calendar').show();
+                     });
+                 });
+
+                 $('.patron-calendar#close').on('click', function() {
+                     $('.patron-calendar').slideUp();
+                     $(this).hide();
+                 });
+                        });
+            function setCookie(name,value,days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days*24*60*60*1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {   
+            document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        </script>
+
+</body>
+
+</html>
